@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTC-Wise</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231a232d'/%3E%3Cpath d='M14 22V14H22 M14 14L24 24' stroke='%2300b8f0' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 44V50H50V44' stroke='%2300b8f0' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Crect x='20' y='34' width='6' height='10' rx='1' fill='%2300b8f0'/%3E%3Crect x='30' y='27' width='6' height='17' rx='1' fill='%2300b8f0'/%3E%3Crect x='40' y='20' width='6' height='24' rx='1' fill='%2300b8f0'/%3E%3C/svg%3E" />
+
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="logo"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 30 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+            </svg>
+        </div>
+
+        <div class="head">
+            <h3>CTC-Wise</h3>
+            <span>Understand your real compensation</span>
+        </div>
+
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle theme">
+
+            <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"></circle>
+
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+
+        </button>
+    </header>
+    <main>
+
+        <section>
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="hero-tag">Smart Salary Understanding</span>
+                    <h1>
+                        Your CTC isn't your
+                        <span>salary.</span>
+                    </h1>
+
+                    <p>
+                        Understand your compensation, break down your CTC,
+                        and estimate what you may actually take home.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="hero-actions">
+
+                <a href="#calculator" class="primary-btn">
+                    Calculate My CTC
+                </a>
+
+
+
+                <a href="#realit" class="secondary-btn">
+                    Understand CTC
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="reality" id="">
+            <div class="section-heading">
+                <span>THE REALITY</span>
+                <h2>Your CTC is more than just your salary.</h2>
+                <p>
+                    Understand what makes up the package mentioned
+                    in your offer letter and why it may differ from
+                    your actual take-home salary.
+                </p>
+
+            </div>
+
+            <div class="reality-grid">
+                <div class="info-card">
+                    <h3>Fixed Salary</h3>
+                    <p>
+                        The fixed compensation you receive according
+                        to your employment terms.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Variable Pay</h3>
+                    <p>
+                        Performance-based compensation that may depend
+                        on individual or company targets.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Employer Contributions</h3>
+                    <p>
+                        Components such as employer provident fund
+                        contributions and gratuity.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Equity & Benefits</h3>
+                    <p>
+                        Components such as RSUs, ESOPs, insurance
+                        and other employment benefits.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="calculator" id="calculator">
+
+            <div class="section-heading">
+
+                <span>QUICK ESTIMATE</span>
+
+                <h2>Calculate your CTC.</h2>
+
+                <p>
+                    Enter the annual package mentioned in your offer
+                    letter to start understanding your compensation.
+                </p>
+
+            </div>
+
+            <div class="calculator-box">
+
+                <label for="ctcInput">Annual CTC</label>
+
+                <div class="input-wrapper">
+
+                    <span>₹</span>
+
+                    <input type="number" id="ctcInput" placeholder="Enter your CTC" min="0.00" step="any">
+
+                    <span>LPA</span>
+
+                </div>
+
+                <button id="calculateBtn" type="button">
+
+                    Calculate CTC
+                </button>
+
+                <p class="ctcerror" id="ctcError"></p>
+
+            </div>
+
+        </section>
+
+        <section class="take-home" id="take-home">
+
+            <div class="take-home-content">
+
+                <span>YOUR SALARY, EXPLAINED</span>
+
+                <h2>What might reach your bank account?</h2>
+
+                <p>
+                    Understand your estimated monthly take-home
+                    after applicable deductions and taxes.
+                </p>
+
+                <div class="take-home-grid">
+
+                    <div class="take-home-card">
+                        <span>Monthly CTC equivalent</span>
+                        <strong id="monthlyCTCResult">₹ —</strong>
+                    </div>
+
+                    <div class="take-home-card">
+                        <span>Monthly Gross</span>
+                        <strong id="monthlyGrossResult">₹ —</strong>
+                    </div>
+
+
+
+                    <div class="take-home-card">
+                        <span>Estimated Deductions</span>
+                        <strong id="monthlyDeductionsResult">₹ —</strong>
+                    </div>
+
+                </div>
+
+                <div class="take-home-result">
+                    <small>Estimated Monthly Take-Home</small>
+                    <strong id="monthlyTakeHomeResult">₹ —</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="understand-ctc" id="realit">
+
+            <div class="section-heading">
+                <span>LEARN YOUR SALARY</span>
+                <h2>Understand every part of your CTC.</h2>
+                <p>
+                    Explore the meaning of salary components, employer benefits,
+                    deductions, bonuses and equity compensation.
+                </p>
+            </div>
+
+
+
+            <div class="learn-group">
+                <h3></h3>
+
+                <div class="learn-grid">
+
+                    <article class="learn-card">
+                        <h4>
+                            Monthly CTC equivalent :
+                        </h4>
+                        <p><strong>Meaning:</strong> The total monthly Cost to Company, including gross pay and
+                            employer-paid benefits.</p>
+                        <p><strong>Why it matters:</strong> It shows the complete financial investment your employer
+                            makes in you.</p>
+                        <p><strong>Take-home impact:</strong> It is your highest salary figure but includes non-cash
+                            components you won't see monthly.
+                        </p>
+                    </article>
+
+                    <article class="learn-card">
+                        <h4>Monthly Gross :</h4>
+                        <p><strong>Meaning:</strong> Your total earnings before any taxes or PF are subtracted.</p>
+                        <p><strong>Why it matters:</strong> It is the base number banks use to check your loan
+                            eligibility.</p>
+                        <p><strong>Take-home impact:</strong> It is a starting benchmark; your actual paycheck will be
+                            lower.</p>
+                    </article>
+
+                    <article class="learn-card">
+                        <h4>Estimated Deductions :</h4>
+                        <p><strong>Meaning:</strong> Money subtracted for statutory taxes (TDS, PT) and provident fund
+                            (PF).</p>
+                        <p><strong>Why it matters:</strong> It ensures tax compliance and builds your long-term
+                            retirement savings.</p>
+                        <p><strong>Take-home impact:</strong> Higher deductions directly reduce your cash-in-hand.</p>
+                    </article>
+                </div>
+
+                <div class="dif">
+
+                    <article class="learn-card">
+                        <h4>Estimated Monthly Take-Home :</h4>
+                        <p><strong>Meaning:</strong> The actual net cash credited to your bank account each month.</p>
+                        <p><strong>Why it matters:</strong> It defines your real disposable income for daily living and
+                            saving.</p>
+                        <p><strong>Take-home impact:</strong> This is your final, liquid income after all deductions.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2026
+                <a class="ff" href="https://sanchitbuilds-com.onrender.com/" target="_blank"
+                    rel="noopener">SanchitBuilds.com</a>
+                . All rights reserved.
+            </p>
+            <p>CTCWise • Salary Understanding Tool</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
